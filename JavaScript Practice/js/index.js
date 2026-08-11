@@ -8,6 +8,13 @@ console.log("Multiplication of a and b is:", "a * b =", a * b);
 console.log("Division of a and b is:", "a / b =", a / b);
 console.log("Modulus of a and b is:", "a % b =", a % b);
 
+//Unary Operators
+var a = 8;
+var b = 6;
+console.log("a =", a,"& b =", b);
+console.log("Increment of a is:", "a++ =", ++a);
+console.log("Decrement of b is:", "b-- =", --b);
+
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
 var operator = prompt("Enter the operator");
