@@ -15,6 +15,22 @@ console.log("a =", a, "& b =", b);
 console.log("Increment of a is:", "a++ =", ++a);
 console.log("Decrement of b is:", "b-- =", --b);
 
+// Assignment Operators
+var a = 10;
+var b = 5;
+console.log("a =", a, "& b =", b);
+a += b;
+console.log("After a += b, a =", a);
+a -= b;
+console.log("After a -= b, a =", a);
+a *= b;
+console.log("After a *= b, a =", a);
+a /= b;
+console.log("After a /= b, a =", a);
+a %= b;
+console.log("After a %= b, a =", a);
+
+
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
 var operator = prompt("Enter the operator");
@@ -34,6 +50,7 @@ else if (operator === "/") {
     output.innerHTML = number1 / number2;
 }
 var result = number1 + " " + operator + " " + number2 + " = " + output.innerHTML;
+
 
 function submitAge() {
     var currentUserAge = Number(document.getElementById("age").value);
