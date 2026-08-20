@@ -99,6 +99,14 @@ console.log("Type of num:", typeof num);
 console.log("Type of str:", typeof str);
 
 //Conditional Statements
+let number = 10;
+if (number > 0) {
+    console.log("The number is positive.");
+} else if (number < 0) {
+    console.log("The number is negative.");
+} else {
+    console.log("The number is zero.");
+}
 
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
