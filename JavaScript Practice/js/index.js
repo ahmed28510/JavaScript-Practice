@@ -42,6 +42,63 @@ console.log("Is a less than b?", a < b);
 console.log("Is a greater than or equal to b?", a >= b);
 console.log("Is a less than or equal to b?", a <= b); 
 
+// Logical Operators
+var a = true;
+var b = false;
+console.log("a =", a, "& b =", b);
+console.log("Is a and b both true?", a && b);
+console.log("Is either a or b true?", a || b);
+console.log("Is a not true?", !a);
+
+
+// Ternary Operator
+var age = 18;
+var isAdult = (age >= 18) ? "Yes, you are an adult." : "No, you are not an adult.";
+console.log("Age:", age);
+console.log(isAdult);
+
+// Typeof Operator
+var a = 10;
+var b = "Hello";
+console.log("Type of a:", typeof a);
+console.log("Type of b:", typeof b);
+
+// Instanceof Operator
+var date = new Date();
+console.log("Is date an instance of Date?", date instanceof Date);
+
+// Delete Operator
+var obj = { name: "John", age: 30 };
+console.log("Before delete:", obj);
+delete obj.age;
+console.log("After delete:", obj);
+
+// Comma Operator
+var a = (1, 2, 3);
+console.log("Value of a after comma operator:", a);
+
+// Conditional (Ternary) Operator
+var age = 20;
+var canVote = (age >= 18) ? "Yes, you can vote." : "No, you cannot vote.";
+console.log("Age:", age);
+console.log(canVote);
+
+// Void Operator
+function myFunction() {
+    console.log("This function returns undefined.");
+}   
+
+// The void operator can be used to evaluate an expression and return undefined
+var result = void myFunction();
+console.log("Result of void operator:", result);
+
+// Type Conversion
+var num = "10";
+var str = 20;
+console.log("Type of num:", typeof num);
+console.log("Type of str:", typeof str);
+
+//Conditional Statements
 
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
