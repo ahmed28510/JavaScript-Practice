@@ -31,6 +31,18 @@ a %= b;
 console.log("After a %= b, a =", a);
 
 
+// Comparison Operators
+var a = 10;
+var b = 5;
+console.log("a =", a, "& b =", b);
+console.log("Is a equal to b?", a == b);
+console.log("Is a not equal to b?", a != b);
+console.log("Is a greater than b?", a > b);
+console.log("Is a less than b?", a < b);
+console.log("Is a greater than or equal to b?", a >= b);
+console.log("Is a less than or equal to b?", a <= b);
+
+
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
 var operator = prompt("Enter the operator");
