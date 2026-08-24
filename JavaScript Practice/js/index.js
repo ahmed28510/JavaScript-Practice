@@ -103,9 +103,33 @@ let number = 10;
 if (number > 0) {
     console.log("The number is positive.");
 } else if (number < 0) {
-    console.log("The number is negative.");
+    console.log("The number is negative."); 
 } else {
     console.log("The number is zero.");
+}
+
+// looping Statements
+for (let i = 1; i <= 5; i++) {
+    console.log("Iteration:", i);
+    if (i === 3) {
+        console.log("Breaking the loop at iteration 3.");
+        break;
+    }else {
+        console.log("Continuing the loop.");
+        continue;
+    }
+}
+// Function Declaration
+function greet(name) {
+    for (let i = 0; i < 3; i++) {
+        console.log("Hello, " + name + "!");
+    }if (name === "Alice") {
+        console.log("Welcome, Alice!");
+    }else {
+        console.log("You are not Alice.");
+    }
+    return "Hello, " + name + "!";
+
 }
 
 // Simple Mathematical Operations looks like a calculator
