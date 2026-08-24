@@ -131,6 +131,17 @@ function greet(name) {
     return "Hello, " + name + "!";
 
 }
+// Function Expression
+var add = function (a, b) {
+    var sum = a + b;
+    var difference = a - b;
+    var product = a * b;
+    var quotient = a / b;
+    var userInput = prompt("Enter a number to add to the sum:");
+    var userInputNumber = parseFloat(userInput);
+    sum += userInputNumber;
+    return sum;
+};
 
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
