@@ -143,6 +143,27 @@ var add = function (a, b) {
     return sum;
 };
 
+// function call
+var result = add(5, 3);
+var result2 = greet("Alice");
+if (result2 === "Hello, Alice!") {
+    for (let i = 0; i < 3; i++) {
+        console.log("The greeting is for Alice.");
+    } else {
+        console.log("The greeting is not for Alice.");
+    }
+}
+console.log("Result of addition:", result);
+
+// Arrow Function
+var multiply = (a, b) => {
+    var product = a * b;
+    var userInput = prompt("Enter a number to multiply with the product:");
+    var userInputNumber = parseFloat(userInput);
+    product *= userInputNumber;
+    return product;
+};
+
 // Simple Mathematical Operations looks like a calculator
 var number1 = + prompt("Enter the first number:");
 var operator = prompt("Enter the operator");
