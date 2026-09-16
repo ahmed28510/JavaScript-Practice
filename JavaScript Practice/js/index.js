@@ -490,4 +490,133 @@ function checkLongestWord(sentence) {
 console.log(checkLongestWord('Web Development Course'))
 
 
+// Sir code taking input and making table from JavaScript and append the value in it
+
+var todos = [];
+
+function addTodo(e) {
+  e.preventDefault();
+  todos.push(inputValue);
+
+  // Fetching data
+  var inputValue = document.getElementById('todo-input').value;
+  var todoTable = document.getElementById('todo-table');
+  var todoTableWithoutJunk = removeJunkArtifacts(todoTable);
+  var tableBody = todoTableWithoutJunk.childNodes[0];
+  var tableHeading = document.createElement('tr');
+  var tableHeadingCell = document.createElement('th');
+  var tableHeadingCellText = document.createTextNode('Tasks');
+
+  tableBody.innerHTML = '';
+  
+  tableBody.appendChild(tableHeading);
+
+
+  for (var i = 0; i < todos.length; i++) {
+    
+    // creating elements node
+    var tableRow = document.createElement('tr');
+    var tableCell1 = document.createElement('td');
+    var tableCell2 = document.createElement('td');
+    var tableCell1_Text_Node = document.createTextNode(todos[i]);
+    var tableCell2_Button = document.createElement('button');
+    var button_Text_Node = document.createTextNode('Remove');
+    tableCell2_Button.appendChild(button_Text_Node);
+
+    // appending/adding elements node
+    tableHeadingCell.appendChild(tableHeadingCellText);
+    tableHeading.appendChild(tableHeadingCell);
+    tableCell1.appendChild(tableCell1_Text_Node);
+    tableCell2.appendChild(tableCell2_Button);
+    tableRow.appendChild(tableCell1);
+    tableRow.appendChild(tableCell2);
+    tableBody.appendChild(tableRow);
+
+
+  }
+}
+
+
+// Making table from JavaScript Ahmed's code
+
+var todoContainer = document.getElementById('todo-container')
+var todoTable = document.createElement('table');
+todoTable.setAttribute('border','1px solid black')
+todoContainer.appendChild(todoTable);
+
+var tbody = document.createElement('tbody');
+todoTable.appendChild(tbody);
+
+var tableRow1 = document.createElement('tr');
+tbody.appendChild(tableRow1);
+
+var tableHeading = document.createElement('th');
+tableRow1.appendChild(tableHeading);
+
+
+var tableHeading_Text_Node = document.createTextNode('Task')
+tableHeading.appendChild(tableHeading_Text_Node);
+
+
+var tableRow2 = document.createElement('tr')
+tbody.appendChild(tableRow2);
+
+var tableCell1 = document.createElement('td');
+tableRow2.appendChild(tableCell1);
+
+var tableCell_Text_Node = document.createTextNode('Ahmed');
+tableCell1.appendChild(tableCell_Text_Node);
+
+var tableCell2 = document.createElement('td');
+tableRow2.appendChild(tableCell2);
+
+var button = document.createElement('button');
+var button_Text_Node = document.createTextNode('Remove');
+button.appendChild(button_Text_Node);
+tableCell2.appendChild(button);
+
+console.log(todoContainer)
+
+
+// Bilal code about making table
+
+var todoContainer = document.getElementById('todo-container');
+
+var table = document.createElement('table');
+table.setAttribute('id', 'todo-table');
+table.setAttribute('border', '1 px solid black');
+
+var tbody = document.createElement('tbody');
+
+var tableRow1 = document.createElement('tr');
+var tableRow2 = document.createElement('tr');
+var button=document.createElement('button')
+var button_text_node=document.createTextNode('Remove')
+button.appendChild(button_text_node);
+
+var tableHeading1 = document.createElement('th');
+var tableHeading1_text_node = document.createTextNode('task');
+
+tableHeading1.appendChild(tableHeading1_text_node);
+
+var tablecell1 = document.createElement('td');
+var tablecell2 = document.createElement('td');
+
+var tablecell1_text_node = document.createTextNode('bilal');
+var tablecell2_text_node = document.createTextNode();
+
+tablecell2.appendChild(button);
+tablecell1.appendChild(tablecell1_text_node);
+tablecell2.appendChild(tablecell2_text_node);
+
+tableRow1.appendChild(tableHeading1);
+
+tableRow2.appendChild(tablecell1);
+tableRow2.appendChild(tablecell2);
+
+tbody.appendChild(tableRow1);
+tbody.appendChild(tableRow2);
+
+table.appendChild(tbody);
+todoContainer.appendChild(table);
 
