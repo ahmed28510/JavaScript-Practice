@@ -659,3 +659,46 @@ var benefits = [{
 }];
 
 
+var container = document.getElementById('table-container');
+var table = document.createElement('table');
+var headerRow = document.createElement('tr');
+var emptyCell = document.createElement('th');
+table.setAttribute('border', '1px solid black');
+table.setAttribute('class', 'table');
+headerRow.appendChild(emptyCell);
+
+// code to dynamically appending table header row
+for (var i = 0; i < plans.length; i++) {
+  var planTitle = document.createElement('th');
+  var planTitleText = document.createTextNode(plans[i].name);
+  planTitle.setAttribute('class', plans[i].name)
+  planTitle.appendChild(planTitleText);
+  headerRow.appendChild(planTitle);
+};
+table.appendChild(headerRow);
+
+
+for (var i = 0; i < benefits.length; i++) {
+  //Benefit Title Row
+  var benefitRow = document.createElement('tr');
+  var benefitType = document.createElement('td');
+  var benefitTitle = document.createTextNode(benefits[i].name);
+  benefitType.appendChild(benefitTitle);
+  benefitRow.appendChild(benefitType);
+
+
+
+  for (var j = 0; j < plans.length; j++) {
+    var planTitle = document.createElement('td');
+    var planTitleText = document.createTextNode(plans[j][benefits[i].key]);
+    planTitle.appendChild(planTitleText);
+    benefitRow.appendChild(planTitle)
+  }
+
+  table.appendChild(benefitRow)
+}
+
+
+
+container.appendChild(table)
+
