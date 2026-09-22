@@ -620,3 +620,42 @@ tbody.appendChild(tableRow2);
 table.appendChild(tbody);
 todoContainer.appendChild(table);
 
+
+// Make a dynamic table using objects
+
+var plans = [{
+  name: 'basic',
+  monthly: '$3.99',
+  space: '100GB',
+  data_limit: '1000GB/month',
+  site_pages: '10'
+}, {
+  name: 'professional',
+  monthly: '$5.99',
+  space: '500GB',
+  data_limit: '5000GB/month',
+  site_pages: '50'
+},
+{
+  name: 'ultimate',
+  monthly: '$9.99',
+  space: '2000GB',
+  data_limit: '20000GB/month',
+  site_pages: '500'
+}];
+
+var benefits = [{
+  name: 'Monthly',
+  key: 'monthly'
+}, {
+  name: 'Disk Space',
+  key: 'space'
+}, {
+  name: 'Data Transfer',
+  key: 'data_limit'
+}, {
+  name: 'Site Pages',
+  key: 'site_pages'
+}];
+
+
