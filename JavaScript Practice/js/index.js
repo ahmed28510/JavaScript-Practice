@@ -727,4 +727,15 @@ function checkPassword(password, confirm_password) {
     throw 'No empty spaces are allowed in password';
   };
   // m7@uhazzib
+    for (var i = 0; i < password.length; i++) {
+    var currentCharInNum = Number(password[i]);
+    var isCurrentCharNaN = isNaN(currentCharInNum);
+
+    if(!isCurrentCharNaN) {
+      passwordRules.hasNumber = true;
+    };
+
+    if(specialChar.includes(password[i])) {
+      passwordRules.hasSpecialCharacters = true;
+    }
 }
