@@ -699,7 +699,7 @@ for (var i = 0; i < benefits.length; i++) {
 }
 container.appendChild(table)
 
-// Form vali
+// Form Validation
 
 function checkUsername(username) {
   if (username.includes(' ')) {
@@ -720,5 +720,11 @@ function checkPassword(password, confirm_password) {
   };
 
   if (password !== confirm_password) {
-}
+       throw 'Password and Confirm Password is not matching'
+  };
+
+  if (password.includes(' ') || confirm_password.includes(' ')) {
+    throw 'No empty spaces are allowed in password';
+  };
+  // m7@uhazzib
 }
