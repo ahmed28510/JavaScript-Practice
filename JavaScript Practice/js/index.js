@@ -738,4 +738,19 @@ function checkPassword(password, confirm_password) {
     if(specialChar.includes(password[i])) {
       passwordRules.hasSpecialCharacters = true;
     }
+
+      if(specialChar.includes(password[i])) {
+      passwordRules.hasSpecialCharacters = true;
+    }
+
+  };
+
+  if(!passwordRules.hasNumber) {
+    throw 'Password should contain number';
+  }
+
+  if(!passwordRules.hasSpecialCharacters) {
+    throw 'Password should contain special characters';
+  }
+};
 }
