@@ -698,7 +698,21 @@ for (var i = 0; i < benefits.length; i++) {
   table.appendChild(benefitRow)
 }
 
-
-
 container.appendChild(table)
 
+
+function checkUsername(username) {
+  if (username.includes(' ')) {
+    throw 'No empty spaces are allowed in username';
+  };
+
+  if (username.length < 5) {
+    throw 'Username length should be greater than 5';
+  };
+};
+
+
+function checkPassword(password, confirm_password) {
+  var specialChar = ['#', '@', '%', ';'];
+  
+}
