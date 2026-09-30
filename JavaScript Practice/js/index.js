@@ -9,46 +9,46 @@ console.log("Division of a and b is:", "a / b =", a / b);
 console.log("Modulus of a and b is:", "a % b =", a % b);
 
 //Unary Operators
-var a = 8;
-var b = 6;
-console.log("a =", a, "& b =", b);
-console.log("Increment of a is:", "a++ =", ++a);
-console.log("Decrement of b is:", "b-- =", --b);
+var abh = 8;
+var bah = 6;
+console.log("abh =", abh, "& bah =", bah);
+console.log("Increment of abh is:", "abh++ =", ++abh);
+console.log("Decrement of bah is:", "bah-- =", --bah);
 
 // Assignment Operators
-var a = 10;
-var b = 5;
-console.log("a =", a, "& b =", b);
-a += b;
-console.log("After a += b, a =", a);
-a -= b;
-console.log("After a -= b, a =", a);
-a *= b;
-console.log("After a *= b, a =", a);
-a /= b;
-console.log("After a /= b, a =", a);
-a %= b;
-console.log("After a %= b, a =", a);
+var abh = 10;
+var bah = 5;
+console.log("abh =", abh, "& bah =", bah);
+abh += bah;
+console.log("After abh += bah, abh =", abh);
+bah -= abh;
+console.log("After bah -= abh, bah =", bah);
+bah *= abh;
+console.log("After bah *= abh, bah =", bah);
+bah /= abh;
+console.log("After bah /= abh, bah =", bah);
+bah %= abh;
+console.log("After bah %= abh, bah =", bah);
 
 
 // Comparison Operators
-var a = 10;
-var b = 5;
-console.log("a =", a, "& b =", b);
-console.log("Is a equal to b?", a == b);
-console.log("Is a not equal to b?", a != b);
-console.log("Is a greater than b?", a > b);
-console.log("Is a less than b?", a < b);
-console.log("Is a greater than or equal to b?", a >= b);
-console.log("Is a less than or equal to b?", a <= b); 
+var abh = 10;
+var bah = 5;
+console.log("abh =", abh, "& bah =", bah);
+console.log("Is abh equal to bah?", abh == bah);
+console.log("Is abh not equal to bah?", abh != bah);
+console.log("Is abh greater than bah?", abh > bah);
+console.log("Is abh less than bah?", abh < bah);
+console.log("Is abh greater than or equal to bah?", abh >= bah);
+console.log("Is abh less than or equal to bah?", abh <= bah);
 
 // Logical Operators
-var a = true;
-var b = false;
-console.log("a =", a, "& b =", b);
-console.log("Is a and b both true?", a && b);
-console.log("Is either a or b true?", a || b);
-console.log("Is a not true?", !a);
+var abh = true;
+var bah = false;
+console.log("abh =", abh, "& bah =", bah);
+console.log("Is abh and bah both true?", abh && bah);
+console.log("Is either abh or bah true?", abh || bah);
+console.log("Is abh not true?", !abh);
 
 
 // Ternary Operator
@@ -58,10 +58,10 @@ console.log("Age:", age);
 console.log(isAdult);
 
 // Typeof Operator
-var a = 10;
-var b = "Hello";
-console.log("Type of a:", typeof a);
-console.log("Type of b:", typeof b);
+var abh = 10;
+var bah = "Hello";
+console.log("Type of abh:", typeof abh);
+console.log("Type of bah:", typeof bah);
 
 // Instanceof Operator
 var date = new Date();
@@ -74,8 +74,8 @@ delete obj.age;
 console.log("After delete:", obj);
 
 // Comma Operator
-var a = (1, 2, 3);
-console.log("Value of a after comma operator:", a);
+var abh = (1, 2, 3);
+console.log("Value of abh after comma operator:", abh);
 
 // Conditional (Ternary) Operator
 var age = 20;
@@ -149,7 +149,7 @@ var result2 = greet("Alice");
 if (result2 === "Hello, Alice!") {
     for (let i = 0; i < 3; i++) {
         console.log("The greeting is for Alice.");
-    } else {
+    }  if (result2 !== "Hello, Alice!") {
         console.log("The greeting is not for Alice.");
     }
 }
@@ -697,9 +697,9 @@ for (var i = 0; i < benefits.length; i++) {
 
   table.appendChild(benefitRow)
 }
-
 container.appendChild(table)
 
+// Form vali
 
 function checkUsername(username) {
   if (username.includes(' ')) {
@@ -714,5 +714,11 @@ function checkUsername(username) {
 
 function checkPassword(password, confirm_password) {
   var specialChar = ['#', '@', '%', ';'];
-  
+    var passwordRules = {
+    hasNumber: false,
+    hasSpecialCharacters: false
+  };
+
+  if (password !== confirm_password) {
+}
 }
