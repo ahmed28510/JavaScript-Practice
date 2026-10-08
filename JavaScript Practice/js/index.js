@@ -1133,3 +1133,64 @@ const shoes = [
     price: 75,
     inStock: true,
   },
+ {
+    id: 4,
+    name: "Old Skool",
+    brand: "Vans",
+    category: "Sneakers",
+    color: "Black/White",
+    size: 40,
+    price: 75,
+    inStock: true,
+  },
+  {
+    id: 5,
+    name: "Chuck Taylor All Star",
+    brand: "Converse",
+    category: "Casual",
+    color: "Red",
+    size: 42,
+    price: 65,
+    inStock: true,
+  },
+];
+
+const filteredShoes = shoes.find((shoe) => {
+  if()
+});
+
+
+
+// const label = document.createElement('label');
+// const textNode = document.createTextNode('Choose Brand')
+// label.appendChild(textNode);
+// const dropDown = document.createElement('select');
+// for()
+// const optins = document.createElement('option');
+
+const onFilter = (e) => {
+  ulElement.innerHTML = "";
+    const filterValue = e.target.value;
+const filteredShoes = shoes.filter((shoe) => shoe.brand === filterValue);
+}
+
+if (filterValue === "all"){
+  randerShoes(shoes)
+}else{
+  randerShoes(filterValue)
+}
+const ulElement = document.getElementById("list");
+const randerShoes = (shoesToRander) => {
+  for (var i = 0; i < shoes.length; i++) {
+    ulElement.innerHTML += '<li>${shoesToRander[i].name}</li>';
+  };
+};
+for (var i = 0; i < shoes.length; i++) {
+  const liElement = document.createElement("li");
+  const liTextNode = document.createTextNode(shoes[i].name);
+  liElement.appendChild(liTextNode);
+  ulElement.appendChild(liElement);
+}
+console.log(shoes)
+
+console.log(filteredShoes)
