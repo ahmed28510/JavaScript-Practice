@@ -971,5 +971,165 @@ for(var i =0 ; i < zipCode.length; i++){
     alert("Enter a validt zip code");
   }
   return false;
+
+function checkPassword(password, confirm_password) {
+  if (password !== confirm_password) {
+    throw 'Password amd confirm Password is not matching'
+  };
+
+  if (password.includes(' ') || confirm_password.includes){
+   
+  }
 }
 
+function checkUsername(username) {
+
+  if (username.length < 5) {
+    throw 'Username lemgth should be greater than 5';
+  };
+
+}
+
+function checkEmail(email){
+if (email.includes(' ')){
+  throw' No empt spaces are allowed';
+};
+var atTheRateIndex = email.IndexOf('@');
+var emailLength = email.length;
+
+if (atTheRateIndex < 1 || (atTheRateIndex >= emailLength - 5) || (atTheRateIndex >= emailLength - 4)){
+  throw'Please provide correct format of email'
+}
+}
+
+function signup(e) {
+  e.preventDefault();
+
+  try {
+    var email = document.getElementById('email').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var confirm_password = document.getElementById('confirm-password').value;
+
+    if (!username || !password || !confirm_password || !email) {
+      throw 'Please provide reqires feilds';
+    };
+checkEmail();
+  }
+  catch (error) {
+    alert(error);
+  }
+}
+
+ var interval;
+function startTimer(){
+  var second = Number(document.getElementById("second").innerHTML);
+  var minutes = Number(document.getElementById("minutes").innerHTML);
+  var hour = Number(document.getElementById("hour"))
+
+
+  interval = setInterval(() => {
+    second+=1
+    // console.log(second , minutes)
+    if (second === 60){
+      minutes += 1;
+      second = 0;
+    }
+    if(minutes === 40){
+            hour += 1;
+      minutes = 0;
+    }
+    document.getElementById("second").innerHTML = second;
+    document.getElementById("minutes").innerHTML = minutes;
+  }, 5);
+}
+
+function stopTimer(){
+  clearInterval(interval);
+}
+
+
+
+
+
+// Advance JavaScript
+
+const increment = () => {
+  let counter = document.getElementById("counter");
+  counter.innerHTML = Number(counter.innerHTML) + 1;
+};
+
+const multiplication = (x = 1, y = 1) => {
+    console.log(x * y)
+};
+
+multiplication(5)
+
+// let, const, var;
+// template literals
+// array methods in advance js
+
+let name = "Muhazzib";
+if (true) {
+  let name = "muhazzib";
+};
+let student = 'Bilal';
+
+if(true) {
+  var studenta = 'Ali';
+}
+function login(params) {
+  var studenta = 'Ali';
+}
+
+console.log(student);
+
+console.log(studenta, "student===");
+// const student = 'muhazzib';
+// student = 'Ali'
+// console.log(student, "student===");
+const userName = 'Muhazzib';
+const greeting = '<h1>'+'Good Morning' + ' ' + userName + '!' + '</h1>';
+const greeting2 = `<h1>Good Morning ${userName}!</h1>`;
+
+const shoes = [
+  {
+    id: 1,
+    name: "Air Runner",
+    brand: "Adidas",
+    category: "Running",
+    color: "Black",
+    size: 42,
+    price: 120,
+    inStock: true,
+  },
+  {
+    id: 2,
+    name: "Ultraboost 24",
+    brand: "Adidas",
+    category: "Running",
+    color: "White",
+    size: 43,
+    price: 180,
+    inStock: true,
+  },
+  {
+    id: 3,
+    name: "Classic Leather",
+    brand: "Adidas",
+    category: "Casual",
+    color: "Brown",
+    size: 41,
+    price: 90,
+    inStock: false,
+  },
+  {
+    id: 4,
+    name: "Old Skool",
+    brand: "Vans",
+    category: "Sneakers",
+    color: "Black/White",
+    size: 40,
+    price: 75,
+    inStock: true,
+  },
