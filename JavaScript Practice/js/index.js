@@ -727,7 +727,7 @@ function checkPassword(password, confirm_password) {
     throw 'No empty spaces are allowed in password';
   };
   // m7@uhazzib
-    for (var i = 0; i < password.length; i++) {
+   for (var i = 0; i < password.length; i++) {
     var currentCharInNum = Number(password[i]);
     var isCurrentCharNaN = isNaN(currentCharInNum);
 
@@ -773,4 +773,78 @@ function signup(e) {
   }
 }
 
+// Advanced Javascript Concepts
 
+var plans = [{
+  name: 'Basic',
+  monthly: '$3.99',
+  space: '100GB',
+  data_limit: '1000GB/month',
+  site_pages: '10'
+}, {
+  name: 'Professional',
+  monthly: '$5.99',
+  space: '500GB',
+  data_limit: '5000GB/month',
+  site_pages: '50'
+},
+{
+  name: 'Ultimate',
+  monthly: '$9.99',
+  space: '2000GB',
+  data_limit: '20000GB/month',
+  site_pages: '500'
+}]
+var rows = ['Monthly','Disk Space','Data Transfer','Site Pages']
+
+var container = document.getElementById('container');
+var table = document.createElement('table');
+var headerRow = document.createElement('tr');
+var emptyCell = document.createElement('th');
+
+table.setAttribute('border', '1px solid black');
+table.setAttribute('class', 'table');
+headerRow.appendChild(emptyCell);
+
+for (var i = 0; i < plans.length; i++) {
+    var planTitle = document.createElement('th');
+    var planTitleText = document.createTextNode(plans[i].name);
+    planTitle.setAttribute('class','plans[i].name')
+    planTitle.appendChild(planTitleText);
+    headerRow.appendChild(planTitle);
+}
+
+table.appendChild(headerRow);
+container.appendChild(table);
+
+console.log(container)
+
+
+
+
+
+var container = document.getElementById('container')
+var table = document.createElement('table');
+table.setAttribute('border','1px solid black')
+container.appendChild(table);
+
+var tbody = document.createElement('tbody');
+table.appendChild(tbody);
+
+
+
+var tableRow1 = document.createElement('tr');
+
+var tableHeading = document.createElement('th');
+var tableHeading_Text_Node1 = document.createTextNode('')
+tableHeading.appendChild(tableHeading_Text_Node1);
+tbody.appendChild(tableRow1);
+tableRow1.appendChild(tableHeading);
+
+
+
+var tableHeading2 = document.createElement('th');
+var tableHeading_Text_Node2 = document.createTextNode('Basic')
+tableHeading2.appendChild(tableHeading_Text_Node2);
+tbody.appendChild(tableRow1);
+tableRow1.appendChild(tableHeading2);
