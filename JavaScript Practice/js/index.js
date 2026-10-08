@@ -848,3 +848,128 @@ var tableHeading_Text_Node2 = document.createTextNode('Basic')
 tableHeading2.appendChild(tableHeading_Text_Node2);
 tbody.appendChild(tableRow1);
 tableRow1.appendChild(tableHeading2);
+
+var tableHeading3 = document.createElement('th');
+var tableHeading_Text_Node3 = document.createTextNode('Professional')
+tableHeading3.appendChild(tableHeading_Text_Node3);
+tbody.appendChild(tableRow1);
+tableRow1.appendChild(tableHeading3);
+
+
+var tableHeading4 = document.createElement('th');
+var tableHeading_Text_Node4 = document.createTextNode('Professional')
+tableHeading4.appendChild(tableHeading_Text_Node4);
+tbody.appendChild(tableRow1);
+tableRow1.appendChild(tableHeading4);
+
+
+
+var tableRow2 = document.createElement('tr')
+tbody.appendChild(tableRow2);
+
+var tableCell1 = document.createElement('td');
+tableRow2.appendChild(tableCell1);
+
+var tableCell_Text_Node = document.createTextNode('Ahmed');
+tableCell1.appendChild(tableCell_Text_Node);
+
+var tableCell2 = document.createElement('td');
+tableRow2.appendChild(tableCell2);
+
+
+
+
+
+ function makeCar(color, transmission, make, model, model_year, price){
+  this.color = color;
+    this.transmission = transmission;
+  this.make = make;
+  this.model = model;
+  this.model_year = model_year;
+  this.price = price;
+
+ };
+
+ makeCar.prototype.getPrice = function(discount){
+ return this.price - (this.price * discount/this.price);
+  }
+
+ var honda = new makeCar('black','munal','honda','civic','2026', 900000);
+
+ var toyota = new makeCar('black','munal','toyota','corolla','2026', 800000);
+
+
+var propertyArray = [];
+for(property in honda){
+  var isPropertyExist = honda.hasOwnProperty(property);
+  if(isPropertyExist === true){
+    propertyArray.push(isPropertyExist)
+  }
+}
+console.log(propertyArray)
+
+ console.log(honda, 'honda' )
+console.log(honda, 'honda' )
+console.log(honda.getPrice(25))
+
+
+
+
+ function makeCar(color, transmission, make, model, model_year, price){
+  this.color = color;
+    this.transmission = transmission;
+  this.make = make;
+  this.model = model;
+  this.model_year = model_year;
+  this.price = price;
+
+ };
+
+ makeCar.prototype.getPrice = function(discount){
+ return this.price - (this.price * discount/this.price);
+  }
+
+ var honda = new makeCar('black','munal','honda','civic','2026', 900000);
+
+ var toyota = new makeCar('black','munal','toyota','corolla','2026', 800000);
+
+
+var propertyArray = [];
+for(property in honda){
+  var isPropertyExist = honda.hasOwnProperty(property);
+  if(isPropertyExist){
+    propertyArray.push(property)
+  }
+}
+console.log(propertyArray)
+
+function navigation(){
+  var bottom = window.location.hostname;
+  var pathname = '#footer';
+  window.location.href = hostname + pathname;
+}
+
+function validateZipCode(e){
+  e.preventDefault()
+var zipCode = document.getElementById(zip).value;
+if(zipCodeField.length < 5){
+  alert('Enter valid length zipcode');
+  return;
+};
+for(var i =0 ; i < zipCode.length; i++){
+  if (isNaN(parsenInt(zipCodeFiled[i]))){
+    alert('Enter valid type of zipcode');
+    return;
+  }
+}
+
+}
+
+
+  var zipCode = document.getElementById(zip);
+  if(zipCode.length < 5  && zipCode.toNumber){
+    alert("Enter a validt zip code");
+  }
+  return false;
+}
+
